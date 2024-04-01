@@ -5,10 +5,9 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define LOWER 1
-#define RAISE 2
-#define ADJUST 3
-
+#define NUMNAV 1
+#define FUNCT 2
+#define GAME 3
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -20,44 +19,44 @@
                 &kp ESC      &kp A     &kp R     &kp S     &kp T     &kp G                          &kp M     &kp N     &kp E     &kp I     &kp O     &kp SEMI   
                 &kp LSHIFT   &kp Z     &kp X     &kp C     &kp D     &kp V                          &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp EXCL     
                 &kp HOME     &kp PG_UP &kp PG_DN &kp END                                                                &kp LPAR  &kp LBKT  &kp RKBT  &kp RPAR     
-                                                 LOWER     &kp LSHIFT &kp TAB                       &kp BSPC  &kp SPACE  RAISE
-                                                 &kp X     &kp LCTRL  &kp LALT                      &kp DEL   &kp ENTER &kp X      
+                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp TAB  &mt RSHIFT SPACE  & mo NUMNAV
+                                                 &none  &sk LCTRL  &sk LALT                      &mt RALT DEL   &mt RCTRL BSPC &none       
             >;
         };
 
-        lower_layer {
+        numnav_layer {
             bindings = <
                 &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp N5                         &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
-                &kp NO       &kp PG_UP &kp HOME  &kp UP    &kp END   &kp NO                         &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
-                &kp NO       &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp NO                         &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
-                &kp NO       &kp NO    &kp NO    &kp NO    &kp NO    &kp NO                         &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
-                &kp NO       &kp NO    &kp NO    &kp NO                                                                 &kp N0    &kp COMMA &kp DOT   &kp DLLR     
-                                                 LOWER     &kp LSHIFT &kp TAB                       &kp BSPC  &kp SPACE  RAISE
-                                                 &kp X     &kp LCTRL  &kp LALT                      &kp DEL   &kp ENTER &kp X      
+                &none        &kp PG_UP &kp HOME  &kp UP    &kp END   &none                          &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
+                &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &none                          &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
+                &none        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                      &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
+                &tog GAME    &none     &none     &none                                                                  &kp N0    &kp COMMA &kp DOT   &kp DLLR     
+                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  & mo NUMNAV
+                                                 &none  &sk LCTRL  &sk LALT                      &kp DEL   &kp TAB &none      
             >;
         };
 
-        raise_layer {
-            bindings = <
-    &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                        &kp F6     &kp F7    &kp F8      &kp F9    &kp F10
-    &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                        &kp N6     &kp N7    &kp N8      &kp N9    &kp N0
-    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                     &kp CARET  &kp AMPS  &kp ASTRK   &kp LPAR  &kp RPAR
-              &kp F11 &kp F12                                                                &trans      &trans
-                                &trans    &trans                        &trans     &trans:w
-                                          &trans    &trans    &trans    &trans
-                                          &trans    &trans    &trans    &trans
+        funct_layer {
+            bindins = <
+                &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &sys_reset            &sys_reset  &none     &none     &none     &none     &none        
+                &none        &none     &none     &none     &none     &bootloader                  &bootloader &none     &none     &none     &none     &none    
+                &trans       &none     &none     &none     &none     &none                          &none     &none     &none     &none     &none     &tog GAME 
+                &none        &none     &none     &none     &none     &soft_off                      &soft_off &none     &none     &none     &none     &none        
+                &none        &none     &bt BT_CLR &bt BT_CLR_ALL                                                        &none     &none     &none     &none        
+                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  & mo NUMNAV
+                                                 &none  &sk LCTRL  &sk LALT                      &kp DEL   &kp TAB &none      
             >;
         };
-	adjust_layer {
+
+        game_layer {
             bindings = <
-		&kp F1        &kp F2       &kp F3       &kp F4        &kp F5           &kp F6  &kp F7  &kp F8   &kp F9   &kp F10
-                &out OUT_BLE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3     &none   &none   &none    &kp F11  &kp F12
-                &out OUT_USB  &none        &none        &none         &none            &none   &none   &none    &none    &none 
-                              &bt BT_CLR   &bt BT_CLR_ALL                                              &none    &none
-                                                      &none &none                      &none &none
-                                                      &none &none                      &none &none
-                                                      &none &none                      &none &none
+                &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH     
+                &kp TAB      &kp T     &kp Q     &kp W     &kp E     &kp R                               &kp J     &kp L     &kp U     &kp Y     &kp APOS  &kp BSPC
+                &kp LCTRL    &kp G     &kp A     &kp S     &kp D     &kp F                               &kp M     &kp N     &kp E     &kp I     &kp O     &kp ENTER   
+                &kp LSHIFT   &kp B     &kp Z     &kp X     &kp C     &kp V                               &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp RSHIFT     
+                &kp LALT     &kp M     &kp N     &kp O                                                                       &none     &none     &none     &tog GAME
+                                                 &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  & mo NUMNAV
+                                                 &none     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
             >;
         };
-    };
 };
