@@ -59,4 +59,5 @@
                                                  &none     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
             >;
         };
+    };
 };
