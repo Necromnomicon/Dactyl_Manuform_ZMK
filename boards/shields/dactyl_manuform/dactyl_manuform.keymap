@@ -18,7 +18,7 @@
                 &kp EQUAL    &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp APOS  &kp MINUS
                 &kp ESC      &kp A     &kp R     &kp S     &kp T     &kp G                          &kp M     &kp N     &kp E     &kp I     &kp O     &kp SEMI   
                 &kp LGUI     &kp Z     &kp X     &kp C     &kp D     &kp V                          &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp EXCL     
-                &kp HOME     &kp PG_UP &kp PG_DN &kp END                                                                &kp LPAR  &kp LBKT  &kp RKBT  &kp RPAR     
+                &kp HOME     &kp PG_UP &kp PG_DN &kp END                                                                &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR     
                                                  &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp TAB  &mt RSHIFT SPACE  &mo NUMNAV
                                                  &kp LA(LC(LSHIFT))  &sk LCTRL  &sk LALT                      &mt RALT DEL   &mt RCTRL BSPC &kp LA(LC(LSHIFT))
             >;
@@ -55,7 +55,7 @@
                 &kp LCTRL    &kp G     &kp A     &kp S     &kp D     &kp F                               &kp M     &kp N     &kp E     &kp I     &kp O     &kp ENTER   
                 &kp LSHIFT   &kp B     &kp Z     &kp X     &kp C     &kp V                               &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp RSHIFT     
                 &kp LALT     &kp M     &kp N     &kp O                                                                       &none     &none     &none     &tog GAME
-                                                 &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  & mo NUMNAV
+                                                 &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
                                                  &none     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
             >;
         };
