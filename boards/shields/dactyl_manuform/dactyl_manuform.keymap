@@ -18,7 +18,7 @@
                 &kp EQUAL    &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp APOS  &kp MINUS
                 &kp ESC      &kp A     &kp R     &kp S     &kp T     &kp G                          &kp M     &kp N     &kp E     &kp I     &kp O     &kp SEMI   
                 &kp LGUI     &kp Z     &kp X     &kp C     &kp D     &kp V                          &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp EXCL     
-                &kp HOME     &kp PG_UP &kp PG_DN &kp END                                                                &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR     
+                &kp HOME     &kp PG_UP &kp LC(LS(TAB)) &kp LC(TAB)                                                      &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR     
                                                  &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp TAB  &mt RSHIFT SPACE  &mo NUMNAV
                                                  &kp LA(LC(LSHIFT))  &sk LCTRL  &sk LALT                      &mt RALT DEL   &mt RCTRL BSPC &kp LA(LC(LSHIFT))
             >;
@@ -27,8 +27,8 @@
         numnav_layer {
             bindings = <
                 &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp N5                         &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
-                &none        &kp PG_UP &kp HOME  &kp UP    &kp END   &none                          &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
-                &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &none                          &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
+                &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP                   &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
+                &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN                   &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
                 &none        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                      &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
                 &tog GAME    &none     &none     &none                                                                  &kp N0    &kp COMMA &kp DOT   &kp DLLR     
                                                  &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
@@ -38,10 +38,10 @@
 
         funct_layer {
             bindings = <
-                &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &sys_reset            &sys_reset  &none     &none     &none     &none     &none        
+                &soft_off &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &none            &none  &none     &none     &none     &none     &soft_off    
                 &none        &none     &none     &none     &none     &bootloader                  &bootloader &none     &none     &none     &none     &none    
                 &trans       &none     &none     &none     &none     &none                          &none     &none     &none     &none     &none     &tog GAME 
-                &none        &none     &none     &none     &none     &soft_off                      &soft_off &none     &none     &none     &none     &none        
+                &none        &none     &none     &none     &none     &sys_reset                     &sys_reset &none     &none     &none     &none     &none        
                 &none        &none     &bt BT_CLR &bt BT_CLR_ALL                                                        &none     &none     &none     &none        
                                                  &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
                                                  &none  &sk LCTRL  &sk LALT                      &kp DEL   &kp TAB &none      
