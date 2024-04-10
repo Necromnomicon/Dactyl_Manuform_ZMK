@@ -41,13 +41,13 @@
 
         default_layer {
             bindings = <
-                &kp MINUS    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL     
-                &kp TAB      &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp APOS  &kp BSLH
-                &kp ESC      &kp A     &hml LALT R  &hml LCTRL S     &hml LSHIFT T     &kp G                          &kp M     &hmr LSHIFT N     &hmr LCTRL E     &hmr LALT I     &kp O     &kp SEMI   
-                &kp LGUI     &kp Z     &kp X     &kp C     &kp D     &kp V                          &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp EXCL     
-                &kp GRAVE    &kp BSLH  &kp LC(LS(TAB)) &kp LC(TAB)                                                      &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR     
-                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp TAB  &mt RSHIFT SPACE  &mo NUMNAV
-                                                 &kp LA(LC(LSHIFT))  &sk LCTRL  &sk LALT         &mt RALT DEL   &mt RCTRL BSPC &kp LA(LC(LSHIFT))
+                &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5           &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
+                &kp TAB      &kp Q     &kp W        &kp F         &kp P          &kp B            &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp BSLH
+                &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G            &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
+                &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V            &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL     
+                &kp GRAVE    &kp BSLH  &kp END      &kp HOME                                                               &kp LPAR      &kp LBKT     &kp RBKT  &kp RPAR     
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                                                    &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
@@ -58,8 +58,8 @@
                 &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN                   &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
                 &none        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                      &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
                 &tog GAME    &none     &none     &none                                                                  &kp N0    &kp COMMA &kp DOT   &kp DLLR     
-                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
-                                                 &none  &sk LCTRL  &sk LALT                      &kp DEL   &kp TAB &none      
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                                                    &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
@@ -70,8 +70,8 @@
                 &trans       &none     &none     &none     &none     &none                          &none     &none     &none     &none     &none     &none  
                 &none        &none     &none     &none     &none     &sys_reset                     &sys_reset &none     &none     &none     &none     &none        
                 &none        &none     &bt BT_CLR &bt BT_CLR_ALL                                                        &none     &none     &none     &none        
-                                                 &mo NUMNAV  &sk LSHIFT &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
-                                                 &none  &sk LCTRL  &sk LALT                      &kp DEL   &kp TAB &none      
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                                                    &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
