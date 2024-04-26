@@ -5,9 +5,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define NUMNAV 1
-#define FUNCT 2
-#define GAME 3
+#define ENGRAM 1
+#define NUMNAV 3
+#define FUNCT 4
+#define GAME 5
 
 / {
  behaviors {
@@ -50,6 +51,19 @@
                                                     &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
+
+        engram_layer {
+            bindings = <
+                &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5           &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
+                &kp TAB      &kp B     &kp Y        &kp O         &kp U          &kp APOS         &kp SEMI  &kp L          &kp D         &kp W        &kp V     &kp Z
+                &kp ESC      &kp C     &hml LALT I  &hml LCTRL E  &hml LSHIFT A  &kp COMMA        &kp DOT   &hmr LSHIFT H  &hmr LCTRL T  &hmr LALT S  &kp N     &kp Q   
+                &kp LGUI     &kp G     &kp H        &kp J         &kp K          &kp MINUS        &kp SLASH &kp R          &kp M         &kp F        &kp P     &kp EXCL     
+                &kp GRAVE    &kp BSLH  &kp END      &kp HOME                                                               &kp LPAR      &kp LBKT     &kp RBKT  &kp RPAR     
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                                                    &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
+            >;
+        };
+
 
         numnav_layer {
             bindings = <
