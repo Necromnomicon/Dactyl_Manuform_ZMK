@@ -47,7 +47,7 @@
         //tap: dot | shift+tap: colon    
         dcol: dot_colon {
             compatible = "zmk,behavior-mod-morph";
-            #bindings-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -55,7 +55,7 @@
         //tap: comma | shift+tap: semicolon    
         cosem: com_semi {
             compatible = "zmk,behavior-mod-morph";
-            #bindings-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -63,7 +63,7 @@
         //tap: apostrophe | shift+tap: lessthan    
         aplpar: apostrophe_leftparenth {
             compatible = "zmk,behavior-mod-morph";
-            #bindings-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp APOS>, <&kp LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -71,7 +71,7 @@
         //tap: quotes | shift+tap: greater than    
         quorpar: quote_rightparenth {
             compatible = "zmk,behavior-mod-morph";
-            #bindings-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
