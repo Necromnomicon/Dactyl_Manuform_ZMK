@@ -35,13 +35,13 @@
             hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30 37 38 39 40 41 42 49 50 51 52 57 58 59 60 61 62 63 64 65 66 67 68>;
             hold-trigger-on-release;
         };
-    
+
         //tap: question mark | Shift + tap: exclimation mark
         qexcl: question_exclimation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSHFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         //tap: dot | shift+tap: colon    
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-mod-morph";
             #bindings-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT|MOD_RSHFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         //tap: comma | shift+tap: semicolon    
@@ -57,23 +57,23 @@
             compatible = "zmk,behavior-mod-morph";
             #bindings-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT|MOD_RSHFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         //tap: apostrophe | shift+tap: lessthan    
-        apolt: apostrophe_lessthan {
+        aplpar: apostrophe_leftparenth {
             compatible = "zmk,behavior-mod-morph";
             #bindings-cells = <0>;
-            bindings = <&kp APOS>, <&kp LESS_THAN>;
-            mods = <(MOD_LSFT|MOD_RSHFT)>;
+            bindings = <&kp APOS>, <&kp LPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     
         //tap: quotes | shift+tap: greater than    
-        quogt: quote_greaterthan {
+        quorpar: quote_rightparenth {
             compatible = "zmk,behavior-mod-morph";
             #bindings-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&kp GREATER_THAN>;
-            mods = <(MOD_LSFT|MOD_RSHFT)>;
+            bindings = <&kp DOUBLE_QUOTES>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -95,7 +95,7 @@
         engram_layer {
             bindings = <
                 &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5           &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
-                &kp TAB      &kp B     &kp Y        &kp O         &kp U          &apolt           &quogt    &kp L          &kp D         &kp W        &kp V     &kp Z
+                &kp TAB      &kp B     &kp Y        &kp O         &kp U          &aplpar          &quorpar  &kp L          &kp D         &kp W        &kp V     &kp Z
                 &kp ESC      &kp C     &hml LALT I  &hml LCTRL E  &hml LSHIFT A  &cosem           &dcol     &hmr LSHIFT H  &hmr LCTRL T  &hmr LALT S  &kp N     &kp Q   
                 &kp LGUI     &kp G     &kp H        &kp J         &kp K          &kp MINUS        &qexcl    &kp R          &kp M         &kp F        &kp P     &kp EXCL     
                 &kp GRAVE    &kp BSLH  &kp END      &kp HOME                                                               &kp LPAR      &kp LBKT     &kp RBKT  &kp RPAR     
