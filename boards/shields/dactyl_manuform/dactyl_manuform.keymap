@@ -6,9 +6,10 @@
 
 #define DEFAULT 0
 #define ENGRAM 1
-#define NUMNAV 3
-#define FUNCT 4
-#define GAME 5
+#define NUMNAV 2
+#define FUNCT 3
+#define GAME 4
+#define FGAME 5
 
 / {
  behaviors {
@@ -67,7 +68,7 @@
             bindings = <&kp APOS>, <&kp LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    
+ 
         //tap: quotes | shift+tap: greater than    
         quorpar: quote_rightparenth {
             compatible = "zmk,behavior-mod-morph";
@@ -82,62 +83,73 @@
 
         default_layer {
             bindings = <
-                &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5           &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
-                &kp TAB      &kp Q     &kp W        &kp F         &kp P          &kp B            &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp BSLH
-                &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G            &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
-                &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V            &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL     
-                &kp GRAVE    &kp BSLH  &kp END      &kp HOME                                                               &kp LPAR      &kp LBKT     &kp RBKT  &kp RPAR     
-                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
-                                                    &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
+                &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp LBRC       &kp RBRC     &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
+                &kp TAB      &kp Q     &kp W        &kp F         &kp P          &kp B  &kp LBKT       &kp RBKT     &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp BSLH
+                &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G  &kp LPAR       &kp RPAR     &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
+                &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp MINUS     
+                                       &kp END      &kp HOME                                                                  &kp PG_UP      &kp PG_DN     
+                                                    &kp DEL &sk LSHIFT &kp BSPC                               &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
+                                                    &mo NUMNAV &kp UP  &kp DOWN                               &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
         engram_layer {
             bindings = <
-                &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5           &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
-                &kp TAB      &kp B     &kp Y        &kp O         &kp U          &aplpar          &quorpar  &kp L          &kp D         &kp W        &kp V     &kp Z
-                &kp ESC      &kp C     &hml LALT I  &hml LCTRL E  &hml LSHIFT A  &cosem           &dcol     &hmr LSHIFT H  &hmr LCTRL T  &hmr LALT S  &kp N     &kp Q   
-                &kp LGUI     &kp G     &kp H        &kp J         &kp K          &kp MINUS        &qexcl    &kp R          &kp M         &kp F        &kp P     &kp EXCL     
-                &kp GRAVE    &kp BSLH  &kp END      &kp HOME                                                               &kp LPAR      &kp LBKT     &kp RBKT  &kp RPAR     
-                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                &kp MINUS    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5  &kp LBRC       &kp RBRC  &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp EQUAL     
+                &kp TAB      &kp B     &kp Y        &kp O         &kp U          &aplpar &kp LBKT       &kp RBKT  &quorpar  &kp L          &kp D         &kp W        &kp V     &kp Z
+                &kp ESC      &kp C     &hml LALT I  &hml LCTRL E  &hml LSHIFT A  &cosem  &kp LPAR       &kp RPAR  &dcol     &hmr LSHIFT H  &hmr LCTRL T  &hmr LALT S  &kp N     &kp Q   
+                &kp LGUI     &kp G     &kp H        &kp J         &kp K          &kp MINUS                        &qexcl    &kp R          &kp M         &kp F        &kp P     &kp EXCL     
+                                       &kp END      &kp HOME                                                                  &kp PG_UP      &kp PG_DN     
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
                                                     &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
-
         numnav_layer {
             bindings = <
-                &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp N5                         &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
-                &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP                   &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
-                &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN                   &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
-                &none        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                      &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
-                &tog GAME    &none     &none     &none                                                                  &kp N0    &kp COMMA &kp DOT   &kp DLLR     
-                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp N5       &kp LBRC       &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
+                &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP &kp LBKT       &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
+                &mo FUNCT    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN &kp LPAR       &kp RPAR     &kp PLUS  &kp N4    &kp N5    &kp N6    &kp MINUS &kp J     
+                &tog GAME    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp STAR  &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
+                                       &none     &none                                                                  &kp N0    &kp COMMA 
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
                                                     &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
         funct_layer {
             bindings = <
-                &soft_off &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &none            &none  &none     &none     &none     &none     &soft_off    
-                &none        &none     &none     &none     &none     &bootloader                  &bootloader &none     &none     &none     &none     &none    
-                &trans       &none     &none     &none     &none     &none                          &none     &none     &none     &none     &none     &none  
+                &soft_off &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &none &none       &none           &none  &none     &none     &none     &none     &soft_off    
+                &none        &none     &none     &none     &none     &bootloader &none       &none                 &bootloader &none     &none     &none     &none     &none    
+                &trans       &none     &none     &none     &none     &none        &none       &none                  &none     &none     &none     &none     &none     &tog ENGRAM  
                 &none        &none     &none     &none     &none     &sys_reset                     &sys_reset &none     &none     &none     &none     &none        
-                &none        &none     &bt BT_CLR &bt BT_CLR_ALL                                                        &none     &none     &none     &none        
-                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &kp SPACE  &kp ENTER
+                                       &bt BT_CLR &bt BT_CLR_ALL                                                        &none     &none     
+                                                    &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
                                                     &mo NUMNAV &kp UP  &kp DOWN                       &kp LEFT  &kp RIGHT  &mo NUMNAV
             >;
         };
 
         game_layer {
             bindings = <
-                &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH     
-                &kp TAB      &kp T     &kp Q     &kp W     &kp E     &kp R                               &kp J     &kp L     &kp U     &kp Y     &kp APOS  &kp BSPC
-                &kp LCTRL    &kp G     &kp A     &kp S     &kp D     &kp F                               &kp M     &kp N     &kp E     &kp I     &kp O     &kp ENTER   
-                &kp LSHIFT   &kp B     &kp Z     &kp X     &kp C     &kp V                               &kp K     &kp H     &kp COMMA &kp DOT   &kp SLASH &kp RSHIFT     
-                &kp LALT     &kp M     &kp N     &kp O                                                                       &none     &none     &none     &tog GAME
+                &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5  &none       &none                       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH     
+                &kp TAB      &kp T     &kp Q     &kp W     &kp E     &kp R    &none       &none                           &kp Y     &kp U     &kp I     &kp O     &kp APOS  &kp BSPC
+                &kp LCTRL    &kp G     &kp A     &kp S     &kp D     &kp F   &none       &none                            &kp H     &kp J     &kp K     &kp L     &kp SEMI     &kp ENTER   
+                &kp N6       &kp B     &kp Z     &kp X     &kp C     &kp V                               &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RSHIFT     
+                                       &kp N9    &kp N0                                                                       &none     &tog GAME     
                                                  &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
-                                                 &none     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
+                                                 &sl FGAME  &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
+            >;
+        };
+
+        fgame_layer {
+            bindings = <
+                &kp ESC    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5 &none       &none                                &none     &none     &none     &none     &none     &none      
+                &kp BSPC   &kp P     &kp O     &kp I     &kp U     &kp Y   &none       &none                               &none     &none     &none     &none     &none     &none      
+                &kp ENTER  &kp M     &kp L     &kp K     &kp J     &kp H  &none       &none                                &none     &none     &none     &none     &none     &none      
+                &kp F6     &kp F11   &kp F12   &kp N     &kp N     &kp SLASH                              &none     &none     &none     &none     &none     &none                                      
+                                     &kp F9     &kp F10                                                                       &none     &tog GAME     
+                                                 &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
+                                                 &trans     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
             >;
         };
     };
