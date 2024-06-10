@@ -92,7 +92,7 @@
             bindings = <
                 &soft_off    &none     &none     &none     &none     &none &bt BT_SEL 0       &bt BT_SEL 0 &none     &none     &none     &none     &none     &soft_off    
                 &none        &none     &none     &none     &none     &none &bt BT_SEL 1       &bt BT_SEL 1 &none     &none     &none     &none     &none     &none    
-                &tog GAME    &none     &none     &none     &none     &none &bt BT_SEL 2       &bt BT_SEL 2 &none     &none     &none     &none     &none     &tog ENGRAM  
+                &tog GAME    &none     &none     &none     &none     &none &bt BT_SEL 2       &bt BT_SEL 2 &none     &none     &none     &none     &none     &none
                 &tog FUNCT   &none     &none     &none     &bootloader &sys_reset                       &sys_reset &bootloader &none     &none     &none     &none        
                                        &bt BT_CLR &bt BT_CLR_ALL                                                   &bt BT_CLR_ALL &bt BT_CLR     
                                                     &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
