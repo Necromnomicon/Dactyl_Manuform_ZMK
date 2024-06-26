@@ -11,7 +11,7 @@
 #define FGAME 4
 
 / {
- behaviors {
+    behaviors {
         hml: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -44,7 +44,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        //tap: dot | shift+tap: colon    
+      //tap: dot | shift+tap: colon    
         dcol: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -59,8 +59,18 @@
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
     };
+
+    combos {
+          compatible = "zmk,combos";
+          combo_esc {
+            timeout-ms = <50>;
+            key-positions = <57 58>;
+            bindings = <&tog GAME>;
+
+          };
+        };
+    };   
 
     keymap {
         compatible = "zmk,keymap";
@@ -72,8 +82,8 @@
                 &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G  &kp LBKT       &kp RBKT     &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
                 &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp ENTER     
                                        &kp END      &kp HOME                                                                  &kp PG_UP      &kp PG_DN     
-                                                                 &kp DEL &sk LSHIFT &kp BSPC     &kp TAB &hmr RSHIFT SPACE &kp ENTER
-                                                                 &mo NUMNAV &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NUMNAV
+                                                                 &kp DEL &sk LSHIFT &kp BSPC          &kp TAB &hmr RSHIFT SPACE &kp ENTER
+                                                                 &mo NUMNAV &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NUMNAV
             >;
         };
 
@@ -82,8 +92,8 @@
                 &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp LBRC       &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
                 &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP &kp LBKT       &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
                 &kp ESC      &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN &kp LPAR       &kp RPAR     &kp PLUS  &kp N4    &kp N5    &kp N6    &kp STAR  &kp J     
-                &tog FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &trans    &kp LS(G)  
-                                       &none     &none                                                                            &kp ENTER &kp COMMA 
+                &tog FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &kp ENTER  
+                                       &none     &none                                                                            &kp LS(G) &kp COMMA 
                                                     &kp DEL &sk LSHIFT &kp BSPC        &kp TAB   &hmr RSHIFT SPACE  &kp N0
                                                     &mo NUMNAV &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NUMNAV
             >;
