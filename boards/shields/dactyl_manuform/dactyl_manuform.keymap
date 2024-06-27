@@ -75,12 +75,11 @@
 
           combo_funct {
             timeout-ms = <50>;
-            key-positions = <55 56>
-            bindings = <&tog FUNCT>
-          }
+            key-positions = <55 56>;
+            bindings = <&tog FUNCT>;
+          };
 
-
-        };
+      };
 
     keymap {
         compatible = "zmk,keymap";
