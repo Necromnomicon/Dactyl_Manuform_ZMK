@@ -12,6 +12,7 @@
 
 / {
     behaviors {
+
         hml: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -64,12 +65,21 @@
     //combo to trigger GAME layer. 
     combos {
           compatible = "zmk,combos";
-          combo_esc {
+         
+          combo_game {
             timeout-ms = <50>;
             key-positions = <57 58>;
             bindings = <&tog GAME>;
 
           };
+
+          combo_funct {
+            timeout-ms = <50>;
+            key-positions = <55 56>
+            bindings = <&tog FUNCT>
+          }
+
+
         };
 
     keymap {
@@ -104,8 +114,8 @@
                 &soft_off    &none     &none     &none     &none     &none &bt BT_SEL 0       &bt BT_SEL 0 &none     &none     &none     &none     &none     &soft_off    
                 &none        &none     &none     &none     &none     &none &bt BT_SEL 1       &bt BT_SEL 1 &none     &none     &none     &none     &none     &none    
                 &tog GAME    &none     &none     &none     &none     &none &bt BT_SEL 2       &bt BT_SEL 2 &none     &none     &none     &none     &none     &tog GAME
-                &tog FUNCT   &none     &none     &none     &bootloader &sys_reset                       &sys_reset &bootloader &none     &none     &none     &tog FUNCT        
-                                       &bt BT_CLR &bt BT_CLR_ALL                                                   &bt BT_CLR_ALL &bt BT_CLR     
+                &tog FUNCT   &none     &bt BT_CLR &bt BT_CLR_ALL     &bootloader &sys_reset             &sys_reset &bootloader &bt BT_CLR_ALL &bt BT_CLR     &none     &tog FUNCT        
+                                       &none     &none                                                   &none     &none     
                                                     &kp DEL &sk LSHIFT &kp BSPC                       &kp TAB   &hmr RSHIFT SPACE  &kp ENTER
                                                     &mo NUMNAV &kp LEFT  &kp RIGHT                    &kp UP  &kp DOWN  &mo NUMNAV
             >;
