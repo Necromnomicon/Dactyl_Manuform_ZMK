@@ -61,6 +61,7 @@
         };
     };
 
+    //combo to trigger GAME layer. 
     combos {
           compatible = "zmk,combos";
           combo_esc {
@@ -70,7 +71,6 @@
 
           };
         };
-    };   
 
     keymap {
         compatible = "zmk,keymap";
