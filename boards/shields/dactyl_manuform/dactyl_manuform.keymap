@@ -116,13 +116,8 @@
 
         default_layer {
             bindings = <
-<<<<<<< Updated upstream
-                &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp ENTER      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp BSPC     
-                &kp TAB      &kp Q     &kp W        &kp F         &kp P          &kp B  &kp LPAR       &kp RPAR     &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp BSLH
-=======
                 &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp EQUAL      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp LC(BSPC)     
                 &kp LC(TAB)  &kp Q     &kp W        &kp F         &kp P          &kp B  &kp LPAR       &kp RPAR     &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp BSLH
->>>>>>> Stashed changes
                 &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G  &kp LBKT       &kp RBKT     &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
                 &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp RGUI     
                                        &kp END      &kp HOME                                                                  &kp PG_UP      &kp PG_DN     
@@ -133,10 +128,10 @@
 
         numnav_layer {
             bindings = <
-                &kp F12      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0       &kp LBRC       &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
+                &kp F12      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0       &kp ENTER      &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
                 &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP &kp LBKT       &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
                 &kp ESC      &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN &kp LPAR       &kp RPAR     &kp PLUS  &kp N4    &kp N5    &kp N6    &kp STAR  &kp J     
-                &tog FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &kp ENTER  
+                &tog FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &tog FUNCT
                                        &none     &none                                                                            &kp LS(G) &kp COMMA 
                                                     &kp DEL &sk LSHIFT &kp BSPC        &kp TAB   &hmr RSHIFT SPACE  &kp N0
                                                     &mo NUMNAV &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NUMNAV
