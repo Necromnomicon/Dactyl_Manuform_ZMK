@@ -131,7 +131,7 @@
                 &kp F12      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0       &kp ENTER      &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
                 &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP &kp LBKT       &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
                 &kp ESC      &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp C_VOL_DN &kp LPAR       &kp RPAR     &kp PLUS  &kp N4    &kp N5    &kp N6    &kp STAR  &kp J     
-                &tog FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &tog FUNCT
+                &mo FUNCT   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &mo FUNCT
                                        &none     &none                                                                            &kp LS(G) &kp COMMA 
                                                     &kp DEL &sk LSHIFT &kp BSPC        &kp TAB   &hmr RSHIFT SPACE  &kp N0
                                                     &mo NUMNAV &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NUMNAV
