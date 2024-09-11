@@ -120,7 +120,7 @@
         &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
                                         &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
                                                             &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            &mo NUMNAV &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NUMNAV
+                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NAVNUM
       >;
     };
 
@@ -132,7 +132,7 @@
         &kp LGUI     &kp Q     &kp X        &kp M         &kp C          &kp V                              &kp K     &kp P          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
                                         &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
                                                             &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            &mo NUMNAV &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NUMNAV
+                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NAVNUM
       >;
     };
 
@@ -144,7 +144,7 @@
         &mo FUNCT    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &mo FUNCT
                                   &none     &none                                                                            &kp LS(G) &kp COMMA 
                                                       &kp DEL &sk LSHIFT &kp BSPC        &kp ENTER   &hmr RSHIFT SPACE  &kp N0
-                                                    &mo NUMNAV &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NUMNAV
+                                                    &mo NAVNUM &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NAVNUM
       >;
     };
 
@@ -156,7 +156,7 @@
         &mo FUNCT    &none     &bt BT_CLR &bt BT_CLR_ALL     &bootloader &sys_reset             &sys_reset &bootloader &bt BT_CLR_ALL &bt BT_CLR     &none     &tog FUNCT        
                                                 &none     &none                                                   &none     &none     
                                             &kp DEL &sk LSHIFT &kp BSPC                       &kp ENTER   &hmr RSHIFT SPACE  &kp TAB
-                                          &mo NUMNAV &kp LEFT  &kp RIGHT                    &kp UP  &kp DOWN  &mo NUMNAV
+                                          &mo NAVNUM &kp LEFT  &kp RIGHT                    &kp UP  &kp DOWN  &mo NAVNUM
       >;
     };
 
@@ -167,7 +167,7 @@
         &kp I        &kp G     &kp A     &kp S     &kp D     &kp F   &kp N8       &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI     &kp ENTER   
         &kp M        &kp B     &kp Z     &kp X     &kp C     &kp V                        &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RSHIFT     
                                         &kp N9    &kp N0                                                                       &none     &tog GAME     
-                                          &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
+                                          &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NAVNUM
                                           &sl FGAME  &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
       >;
     };
@@ -179,7 +179,7 @@
         &kp ENTER  &kp M     &kp L     &kp K     &kp J     &kp H  &kp F8       &none   &none     &none     &none     &none     &none     &none      
         &kp F6     &kp F11   &kp F12   &kp N     &kp N     &kp SLASH                   &none     &none     &none     &none     &none     &none                                      
                                       &kp F9     &kp F10                                                                       &none     &tog GAME     
-                                        &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NUMNAV
+                                        &kp LSHIFT &kp SPACE &kp ENTER                &kp BSPC  &kp SPACE  &mo NAVNUM
                                         &trans     &kp LCTRL  &kp LALT                      &kp DEL   &kp TAB &none       
       >;
     };
