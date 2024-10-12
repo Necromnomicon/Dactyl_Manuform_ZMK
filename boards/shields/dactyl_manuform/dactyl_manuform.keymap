@@ -108,9 +108,9 @@
     };
 //combo to select all on any layer 
     combo_all {
-      timeout-ms = <50>
-      key-positions = <44 45 46>
-      bindings = <&kp LC(A)>
+      timeout-ms = <50>;
+      key-positions = <44 45 46>;
+      bindings = <&kp LC(A)>;
     }
   };
 
