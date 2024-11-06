@@ -126,7 +126,7 @@
         &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
                                         &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
                                                             &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &mo NAVNUM
+                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &key_repeat 
       >;
     };
 
