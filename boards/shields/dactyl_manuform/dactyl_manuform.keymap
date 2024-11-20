@@ -119,7 +119,7 @@
         &kp TAB      &kp SLASH &kp N7 &kp N8 &kp N9 &kp STAR &kp LBKT                     &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
         &kp ESC      &kp N0    &kp N4 &kp N5 &kp N6 &kp PLUS &kp LPAR                     &kp RPAR     &kp PLUS  &hmr LSHIFT N4    &hmr LCTRL N5    &hmr LALT N6    &kp STAR  &kp J     
         &mo FUNCT    &kp MINUS &kp N1 &kp N2 &kp N3 &kp K_APP                                          &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &mo FUNCT
-                                  &kp C_VOL_UP &kp C_VOL_DN                                                              &kp LS(G) &kp COMMA 
+                                  &kp C_VOL_UP &kp C_VOL_DOWN                                                              &kp LS(G) &kp COMMA 
                                                       &kp DEL &sk LSHIFT &kp BSPC        &kp ENTER   &hmr RSHIFT SPACE  &kp N0
                                                     &mo NAVNUM &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NAVNUM
       >;
