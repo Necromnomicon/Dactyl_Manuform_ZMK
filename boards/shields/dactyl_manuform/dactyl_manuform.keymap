@@ -5,11 +5,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define GRAPH 1
-#define NAVNUM 2
-#define FUNCT 3
-#define GAME 4
-#define FGAME 5
+#define NAVNUM 1
+#define FUNCT 2
+#define GAME 3
+#define FGAME 4
 
 
 
@@ -84,11 +83,11 @@
       bindings = <&tog GAME>;
 
     };
-//Combo to trigger function layer
+//Combo to trigger NAVNUM layer
     combo_graph {
       timeout-ms = <50>;
       key-positions = <54 55>;
-      bindings = <&tog GRAPH>;
+      bindings = <&tog NAVNUM>;
     };
 //combo to trigger off on left side (turns off both sides)
     combo_softoff1 {
@@ -119,18 +118,6 @@
     compatible = "zmk,keymap";
 
     default_layer {
-      bindings = <
-        &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp EQUAL      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp BSLH 
-        &kp LC(TAB)  &kp Q     &kp W        &kp F         &kp P          &kp B  &kp LPAR       &kp RPAR     &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp LS(LC(TAB))
-        &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G  &kp LBKT       &kp RBKT     &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
-        &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
-                                        &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
-                                                            &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &key_repeat 
-      >;
-    };
-
-    graphite_layer {
       bindings = <
         &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp EQUAL      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp BSLH 
         &kp LC(TAB)  &kp B     &kp L        &kp D         &kp W          &kp Z  &kp LPAR       &kp RPAR     &kp APOS  &kp F          &kp O         &kp U        &kp J     &kp LS(LC(TAB))
