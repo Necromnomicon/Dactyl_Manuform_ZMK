@@ -5,11 +5,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define GRAPH 1
-#define NAVNUM 2
-#define FUNCT 3
-#define GAME 4
-#define FGAME 5
+#define NAVNUM 1
+#define FUNCT 2
+#define GAME 3
+#define FGAME 4
 
 
 
@@ -48,33 +47,8 @@
       hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 42 43 44 45 46 47 54 55 58 59 60 64 65 66>;
       hold-trigger-on-release;
     };
-
-    //tap: question mark | Shift + tap: exclimation mark
-    qexcl: question_exclimation {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp QMARK>, <&kp EXCL>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //tap: dot | shift+tap: colon    
-    dcol: dot_colon {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp COLON>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //tap: comma | shift+tap: semicolon    
-    cosem: com_semi {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp COMMA>, <&kp SEMI>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-  };
-
-  //combo to trigger GAME layer. 
+  
+  //combo to toggle GAME layer. 
   combos {
     compatible = "zmk,combos";
 
@@ -84,13 +58,19 @@
       bindings = <&tog GAME>;
 
     };
-//Combo to trigger function layer
-    combo_graph {
+
+  //combo to toggle NAVNUM layer. 
+  combos {
+    compatible = "zmk,combos";
+
+    combo_game {
       timeout-ms = <50>;
       key-positions = <54 55>;
-      bindings = <&tog GRAPH>;
+      bindings = <&tog NAVNUM>;
+
     };
-//combo to trigger off on left side (turns off both sides)
+
+    //combo to trigger off on left side (turns off both sides)
     combo_softoff1 {
       timeout-ms = <50>;
       key-positions = <0 1>;
@@ -98,7 +78,9 @@
       require-prior-idle-ms = <150>;
       bindings = <&soft_off>;
     };
+
 //combo to trigger off the right side (turns off both sides)
+
     combo_softoff2 {
       timeout-ms = <50>;
       key-positions = <12 13>;
@@ -106,6 +88,7 @@
       require-prior-idle-ms = <150>;
       bindings = <&soft_off>;
     };
+
 //combo to select all on any layer 
     combo_all {
       timeout-ms = <50>;
@@ -121,18 +104,6 @@
     default_layer {
       bindings = <
         &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp EQUAL      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp BSLH 
-        &kp LC(TAB)  &kp Q     &kp W        &kp F         &kp P          &kp B  &kp LPAR       &kp RPAR     &kp J     &kp L          &kp U         &kp Y        &kp APOS  &kp LS(LC(TAB))
-        &kp ESC      &kp A     &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G  &kp LBKT       &kp RBKT     &kp M     &hmr LSHIFT N  &hmr LCTRL E  &hmr LALT I  &kp O     &kp SEMI   
-        &kp LGUI     &kp Z     &kp X        &kp C         &kp D          &kp V                              &kp K     &kp H          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
-                                        &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
-                                                            &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            &mo NAVNUM &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &key_repeat 
-      >;
-    };
-
-    graphite_layer {
-      bindings = <
-        &kp GRAVE    &kp N1    &kp N2       &kp N3        &kp N4         &kp N5 &kp EQUAL      &kp MINUS    &kp N6    &kp N7         &kp N8        &kp N9       &kp N0    &kp BSLH 
         &kp LC(TAB)  &kp B     &kp L        &kp D         &kp W          &kp Z  &kp LPAR       &kp RPAR     &kp APOS  &kp F          &kp O         &kp U        &kp J     &kp LS(LC(TAB))
         &kp ESC      &kp N     &hml LALT R  &hml LCTRL T  &hml LSHIFT S  &kp G  &kp LBKT       &kp RBKT     &kp Y     &hmr LSHIFT H  &hmr LCTRL A  &hmr LALT E  &kp I     &kp SEMI   
         &kp LGUI     &kp Q     &kp X        &kp M         &kp C          &kp V                              &kp K     &kp P          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
@@ -144,11 +115,11 @@
 
     navnum_layer {
       bindings = <
-        &kp F12      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp LBRC                            &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
-        &kp TAB      &kp PG_UP &kp HOME  &kp UP    &kp END   &kp C_VOL_UP &kp LBKT                            &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
-        &kp ESC      &kp PG_DN &hml LALT LEFT  &hml LCTRL DOWN  &hml LSHIFT RIGHT &kp C_VOL_DN &kp LPAR       &kp RPAR     &kp PLUS  &hmr LSHIFT N4    &hmr LCTRL N5    &hmr LALT N6    &kp STAR  &kp J     
-        &mo FUNCT    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp K_APP                                                     &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &mo FUNCT
-                                  &none     &none                                                                            &kp LS(G) &kp COMMA 
+        &kp F12      &kp F1    &kp F2 &kp F3 &kp F4 &kp F5   &kp LBRC                     &kp RBRC     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
+        &kp TAB      &kp SLASH &kp N7 &kp N8 &kp N9 &kp STAR &kp LBKT                     &kp RBKT     &kp PRCNT &kp N7    &kp N8    &kp N9    &kp COLON &kp K   
+        &kp ESC      &kp N0    &kp N4 &kp N5 &kp N6 &kp PLUS &kp LPAR                     &kp RPAR     &kp PLUS  &hmr LSHIFT N4    &hmr LCTRL N5    &hmr LALT N6    &kp STAR  &kp J     
+        &mo FUNCT    &kp MINUS &kp N1 &kp N2 &kp N3 &kp K_APP                                          &kp MINUS &kp N1    &kp N2    &kp N3    &kp SLASH &mo FUNCT
+                                  &kp C_VOL_UP &kp C_VOL_DOWN                                                              &kp LS(G) &kp COMMA 
                                                       &kp DEL &sk LSHIFT &kp BSPC        &kp ENTER   &hmr RSHIFT SPACE  &kp N0
                                                     &mo NAVNUM &kp LEFT  &kp RIGHT     &kp UP  &kp DOWN  &mo NAVNUM
       >;
@@ -158,7 +129,7 @@
       bindings = <
         &soft_off    &kp X     &none     &none     &none     &none &bt BT_SEL 0       &bt BT_SEL 0 &none     &none     &none     &none     &kp Y     &soft_off    
         &none        &none     &none     &none     &none     &none &bt BT_SEL 1       &bt BT_SEL 1 &none     &none     &none     &none     &none     &none    
-        &tog GRAPH   &none     &none     &none     &none     &none &bt BT_SEL 2       &bt BT_SEL 2 &none     &none     &none     &none     &none     &tog GAME
+        &none        &none     &none     &none     &none     &none &bt BT_SEL 2       &bt BT_SEL 2 &none     &none     &none     &none     &none     &tog GAME
         &mo FUNCT    &none     &bt BT_CLR &bt BT_CLR_ALL     &bootloader &sys_reset             &sys_reset &bootloader &bt BT_CLR_ALL &bt BT_CLR     &none     &mo FUNCT        
                                                 &none     &none                                                   &none     &none     
                                             &kp DEL &sk LSHIFT &kp BSPC                       &kp ENTER   &hmr RSHIFT SPACE  &kp TAB
