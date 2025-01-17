@@ -121,12 +121,12 @@
     navnum_layer {
       bindings = <
         &kp F12      &kp F1    &kp F2   &kp F3    &kp F4 &kp F5      &kp LBKT                          &kp RBKT     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11      
-        &kp TAB      &kp SEMI  &kp N7   &kp N8    &kp N9 &kp PERCENT &kp LPAR                          &kp RPAR     &kp LS(G) &kp BSPC  &kp ENTER &kp TAB   &kp DEL   &kp PIPE   
-        &kp ESC      &kp PLUS  &kp N4   &kp N5    &kp N6 &kp STAR    &kp LBRC                          &kp RBRC     &kp K     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp COLON     
-        &kp COMMA    &kp MINUS &kp N1   &kp N2    &kp N3 &kp SLASH                                                  &kp J     &kp HOME  &kp PG_DN &kp PG_UP &kp END   &mo FUNCT
+        &kp TAB      &kp SEMI  &kp N7   &kp N8    &kp N9 &kp PERCENT &kp LPAR                          &kp RPAR     &kp LS(G) &none      &none     &none    &none    &kp PIPE   
+        &kp ESC      &kp PLUS  &kp N4   &kp N5    &kp N6 &kp STAR    &kp LBRC                          &kp RBRC     &kp K     &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &kp COLON     
+        &kp COMMA    &kp MINUS &kp N1   &kp N2    &kp N3 &kp SLASH                                                  &kp J     &none      &none     &none    &none    &none
                                &kp DOT  &kp N0                                                                                       &kp C_VOL_UP &kp C_VOL_DN 
-                                                    &kp DEL &sk LSHIFT &kp BSPC               &kp ENTER   &hmr RSHIFT SPACE  &kp TAB
-                                                    MO_TOG(1) &kp N0  &kp EQUAL               &kp UP  &kp LCTRL &key_repeat 
+                                                    &kp DEL &sk LSHIFT  &kp BSPC               &kp ENTER   &hmr RSHIFT SPACE  &kp TAB
+                                                    MO_TOG(1) &kp EQUAL &kp ENTER              &kp UP  &kp LCTRL &key_repeat 
       >;
     };
 
