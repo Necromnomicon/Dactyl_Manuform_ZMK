@@ -114,7 +114,7 @@
         &kp LGUI     &kp Q     &kp X        &kp M         &kp C          &kp V                              &kp K     &kp P          &kp COMMA     &kp DOT      &kp SLASH &kp EXCL
                                         &kp HOME     &kp END                                                                  &kp PG_UP      &kp PG_DN     
                                                             &kp DEL &sk LSHIFT &kp BSPC          &kp ENTER &hmr RSHIFT SPACE &kp TAB
-                                                            MO_TOG(1) &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  &key_repeat
+                                                            MO_TOG(1) &kp LEFT  &kp RIGHT       &kp UP  &kp DOWN  MO_TOG(1)
       >;
     };
 
@@ -126,7 +126,7 @@
         &kp COMMA    &kp MINUS &kp N1   &kp N2    &kp N3 &kp SLASH                                                  &kp J     &none      &none     &none    &none    &mo FUNCT
                                &kp DOT  &kp N0                                                                                       &kp C_VOL_UP &kp C_VOL_DN 
                                                     &kp DEL &sk LSHIFT  &kp BSPC               &kp ENTER   &hmr RSHIFT SPACE  &kp TAB
-                                                    MO_TOG(1) &kp EQUAL &kp ENTER              &kp UP  &kp LCTRL &key_repeat 
+                                                    MO_TOG(1) &kp EQUAL &kp ENTER              &kp UP  &kp LCTRL MO_TOG(1)
       >;
     };
 
